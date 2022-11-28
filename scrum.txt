@@ -1,0 +1,130 @@
+Sprint 1 - Meeting 1:
+    Agenda
+        - Discussing how much front end work has been completed
+        - Discussing how many tasks each member has completed
+        - Discussing any challenges each member had so far and how to overcome them
+    Accomplishments
+        - Completed GUI for varying end users
+        - Set up database connection for communication with server
+    Plans
+        - Finishing up the rest of the GUIs for all end users  
+        - Implement all HTTP request
+    Minutes
+        Our very first meeting consisted of discussing how we were going to delegate the tasks.
+        This was done after determining the roles each member had, which was split into front-end, 
+        back-end, and project manager. Alex Keener and Reagan Reitmeyer had the back-end roles, 
+        David Asatryan and Sry Hak had the front-end roles, and Emily Ha had the project manager role. 
+        We all brainstormed how to split the tasks into smaller chunks and laid out an initial product backlog, 
+        including what would be done by the first sprint as a minimal viable product. Our team decided to use React,
+        HTML, CSS and Javascript for this project as it would work the best for our purposes.
+
+Sprint 1 - Meeting 2:
+    Agenda
+        - Discussing what everyone has completed since the last scrum meeting
+        - Discussing any issues with current work
+    Plans
+        - Finish the HTTP requests so that we can finish up the front end displays
+        - Implementing more functionality for backend processes
+    Minutes
+        We discussed our current tasks on hand and any issues related to the process. We also discussed any tasks 
+        completed since the first meeting about the project and the difficulties. One of the difficulties was just 
+        the process of learning React and the syntax involved. There were more discussions on switching the assignment
+        of tasks so that the project manager can help more when needed. As a result, more tasks will be assigned to the
+        project manager from the sprint backlog.
+
+
+Sprint 1 - Meeting 3:
+    Agenda
+        - Discussing any tasks that anyone is having trouble with
+        - Discussing the tasks that have been completed
+        - Demoing to the team functionality of the newly completed tasks
+    Plans
+        - Finish debugging backend functions
+        - Implement all HTTP requests to display data on frontend
+    Minutes
+        We discussed any issues with our assigned tasks and finalized what needed to be done as a minimal viable product 
+        for the first sprint. We ended up determining that some tasks previously assigned to the first sprint were not 
+        necessary due to the time constraint we are on for the upcoming deadline. As a result, those tasks are assigned to 
+        the second sprint. One issue discussed was Alex’s task where the postman server request would send back data before 
+        the function completed and update the variables that would be returned to frontend. We brainstormed possible solutions 
+        such as waiting on threads but none have worked so far.
+
+Sprint 2 - Meeting 1: 11/13/22
+    Agenda
+        - Figuring out the tasks for sprint 2
+        - Assigning tasks to members depending on time constraint
+    Plans
+        - Adding ability to cancel an order
+        - Collecting analytical information to display on pages for front end
+        - Creating HTTP request for the manager's statistics and adding new menu item
+        - Adding functionality for adding new menu item for inventory
+        - Checking for low stock for inventory items
+    Minutes
+        From the previous meeting, we discussed any remaining tasks before the sprint ended and what we have created for the 
+        minimal viable product. We also did a mock demo in preparation for the demo during the lab. We discussed pushing some 
+        tasks from sprint 1 onto sprint 2 as well due to time constraints.
+
+Sprint 2 - Meetng 2: 11/18/22
+    Agenda
+        - Any challenges so far for members with their current tasks
+        - Any tasks that everyone has completed since the last meeting
+    Accomplishments
+        - Creating HTTP request for adding new menu items
+        - Function for checking for low stock for inventory items
+        - Collecting analytical information for itemized receipt
+    Plans
+        - Collecting analytical information for the rest of the displays for UI
+        - Implementing the google APIs such as translation, maps, and OAuth
+        - Creating HTTP request for the rest of the functions
+    Minutes
+        During the previous meeting, we discussed any tasks that were completed. After learning that everyone was working 
+        on a big assignment from another course and did not have the time to work on this project, we had no completed tasks 
+        at the moment. This is not a big deal as we completed the bulk of our entire project during sprint 1. We also discussed 
+        any questions we had for the team overall such as specifics regarding a task.
+
+Sprint 2 - Meeting 3: 11/20/22
+    Agenda
+        - Any issues regarding current tasks
+        - What everyone is working on currently
+        - If we are on track with our ideal burndown
+    Accomplishments 
+        - Added the ability to cancel items from order
+        - Implemented google maps
+        - Get data for excess report to give to frontend
+        - Add functionality for delete menu items
+        - Add functionality for updating menu items
+        - Create HTTPS request to change menu item price
+        - Create HTTPS request to delete menu item
+        - Make queries to get information for analytics
+        - Collect analytical information to display data for sales statistics graph
+        - Collects analytical information to display data for sales statistics
+    Plans
+        - Create HTTP request for retrieving  statistics
+        - Implement google translate
+        - Implement google maps
+        - Collect analytical information to display data for ordered items in a time period
+    Minutes
+        After discussing our progress and how long it will take certain remaining tasks to complete, we decided to move tasks 
+        that aren’t necessary for this minimal viable product into sprint 3. As a result, we are less pressed for time for this 
+        sprint. Sprint three contains mostly the finishing touches such as making sure the website is accessible and any tasks that 
+        are proving to be too difficult at the moment. 
+
+Sprint 3 - Meeting 1: 11/27/22
+    Agenda
+        - Any current issues for tasks for the sprint
+        - What tasks everyone is working on at the moment and if help is needed
+        - Discussing if we're on track with ideal burndown
+    Accomplishments
+        - None at the moment since thanksgiving break
+    Plans
+        - Revise color scheme to ensure that website is accessible
+        - Revise website arrangement to ensure accessibility
+        - Create HTTPS request to see items that haven't sold a lot of stock
+        - Implement Google OAuth
+        - Add animations to homepage
+    Minutes
+        This sprint really consists of the final touches to the project. As a result, the discussion from the last meeting from
+        sprint 2 was about pushing any tasks to this sprint that aren't as pressing for the minimum viable product. However, some tasks
+        that were a little too difficult in the time allowed were pushed to the third sprint as well. This includes the google OAuth
+        API. With that in mind, being able to work on one big task and the finishing touches for a sprint makes it easier on the team.
+
