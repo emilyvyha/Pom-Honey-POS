@@ -109,5 +109,22 @@ Sprint 2 - Meeting 3: 11/20/22
         sprint. Sprint three contains mostly the finishing touches such as making sure the website is accessible and any tasks that 
         are proving to be too difficult at the moment. 
 
-
+Sprint 3 - Meeting 1: 11/27/22
+    Agenda
+        - Any current issues for tasks for the sprint
+        - What tasks everyone is working on at the moment and if help is needed
+        - Discussing if we're on track with ideal burndown
+    Accomplishments
+        - None at the moment since thanksgiving break
+    Plans
+        - Revise color scheme to ensure that website is accessible
+        - Revise website arrangement to ensure accessibility
+        - Create HTTPS request to see items that haven't sold a lot of stock
+        - Implement Google OAuth
+        - Add animations to homepage
+    Minutes
+        This sprint really consists of the final touches to the project. As a result, the discussion from the last meeting from
+        sprint 2 was about pushing any tasks to this sprint that aren't as pressing for the minimum viable product. However, some tasks
+        that were a little too difficult in the time allowed were pushed to the third sprint as well. This includes the google OAuth
+        API. With that in mind, being able to work on one big task and the finishing touches for a sprint makes it easier on the team.
 
