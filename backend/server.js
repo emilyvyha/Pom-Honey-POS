@@ -41,9 +41,13 @@ lastName =  ["Smith\'","Williams\'","Lopez\'","Keener\'","Petras\'","Brown\'","A
 // items low on stock
 let lowStock = [];
 
+// all items ordered
+let allOrdered = [];
+
 
 // ***************** Functions directly related to the current Order *****************
     async function addItem(itemName){
+        allOrdered.push(itemName);
         if(orderItems == ""){
             orderItems += itemName;
         }else{
@@ -53,12 +57,10 @@ let lowStock = [];
 
     // get price and tax details
     async function updatePrice(itemName) {
-        console.log("Inside updatePrice");
         // calculate item total
         let itemPrice = 0.00;
         // get new order item's price from database
         let price;
-        console.log("Query Time");
        await pool
         .query("SELECT item_price FROM menu WHERE item_name ='" + itemName + "';")
         .then(query_res => {
@@ -85,8 +87,7 @@ let lowStock = [];
     async function removeItem(itemID){
         // get the price of the item
         let itemPrice = 0.00;
-        let splitItems = orderItems.split(",");
-        await pool.query("SELECT item_price FROM menu WHERE item_name ='" + splitItems[itemID] + "';")
+        await pool.query("SELECT item_price FROM menu WHERE item_name ='" + allOrdered[itemID] + "';")
         .then(query_res => {
             for (let i = 0; i < query_res.rowCount; i++){
                 itemPrice = query_res.rows[i].item_price;
@@ -102,10 +103,20 @@ let lowStock = [];
 
         orderItems = "";
         // add every item back into the string
-        for(let i = 0; i < splitItems.length; i++){
-            if(i != itemID){
-                addItem(splitItems[i]);
+        for(let i = 0; i < allOrdered.length; i++){
+            if(i != itemID && allOrdered[i] != ""){
+                if(orderItems == ""){
+                    orderItems += allOrdered[i];
+                }else{
+                    orderItems += "," + allOrdered[i];
+                }
+            }else{
+                allOrdered[i] = "";
             }
+        }
+        if(orderItems == ""){
+            totalPrice = 0.00;
+            tax = 0.00;
         }
     }
 
@@ -125,6 +136,8 @@ let lowStock = [];
         let updatedDate = date + " " + time;
         cardNum = cardNumberGenerator(12);
         custName = getName();
+        // resets allOrdered
+        allOrdered = [];
 
         await getID().then(()=>{
             let query = "INSERT INTO receipts values(" + orderID + ",'" + paymentType + "'," + totalPrice + ",'" + updatedDate + "','" + orderItems + "'," 
@@ -334,7 +347,10 @@ async function updateInventory(orderItems){
                 }});
             quant=quant_str.quantity; //int
             quant-=1; //update
-            console.log(quant);
+            if(quant<0){
+                quant=0;
+            }
+            console.log("quant: "+quant);
             // Update value of that item
             query_str = "UPDATE ingredients SET quantity = " + quant+ " WHERE name = '" + ingred[j] + "';";
             console.log(query_str);
