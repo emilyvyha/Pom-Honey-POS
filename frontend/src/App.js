@@ -22,8 +22,8 @@ import Map from "./Pages/Map";
 import EditMenu from "./Pages/EditMenu";
 
 // contexts
- import { UserContext } from "./contexts/user";
- import { LanguageContext } from "./contexts/language";
+import { UserContext } from "./contexts/user";
+import { LanguageContext } from "./contexts/language";
 import Auth0ProviderWithHistory from "./auth0ProviderWithHistory";
 
 
