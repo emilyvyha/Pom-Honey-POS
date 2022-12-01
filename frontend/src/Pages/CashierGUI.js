@@ -123,7 +123,7 @@ const CashierGUI = () => {
         setIsLoading(true);
         try {
             const response = await fetch('http://localhost:5000/addItem', {
-                method: 'GET',
+                method: 'POST',
                 body: JSON.stringify({ itemName: item }),
                 headers: {
                     'Content-Type': 'application/json',

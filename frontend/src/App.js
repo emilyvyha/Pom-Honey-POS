@@ -25,6 +25,7 @@ import EditMenu from "./Pages/EditMenu";
 import { UserContext } from "./contexts/user";
 import { LanguageContext } from "./contexts/language";
 import Auth0ProviderWithHistory from "./auth0ProviderWithHistory";
+import LowstockGUI from "./Pages/LowstockGUI";
 
 
 
@@ -47,6 +48,7 @@ const App= ()=> {
             <Route path="/inventory" element={<Inventory />} />
             <Route path="/popularcombos" element={<PopularCombos />} />
             <Route path="/excessreport" element={<ExcessReport />} />
+            <Route path="/lowstockgui" element={<LowstockGUI />} />
             {/* <Route path="/customergui" element={<CustomerGUI />} /> */}
             <Route path="/" element={<CustomerGUI />} />
 

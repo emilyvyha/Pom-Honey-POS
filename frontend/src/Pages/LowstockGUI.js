@@ -17,6 +17,7 @@ import { UserContext } from "../contexts/user";
 import { LanguageContext } from '../contexts/language';
 
 const LowstockGUI = ()=> {
+    const {lang, setLang} = useContext(LanguageContext)
     const [stockItems, setStockItems] = useState([])
     const [isLoading, setIsLoading] = useState(false);
     const [err, setErr] = useState('');
@@ -25,7 +26,7 @@ const LowstockGUI = ()=> {
         setIsLoading(true);
         try {
             const response = await fetch('http://localhost:5000/lowStock', {
-                method: 'POST',
+                method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
                     Accept: 'application/json',
