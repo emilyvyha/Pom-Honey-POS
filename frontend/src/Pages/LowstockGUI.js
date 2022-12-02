@@ -9,6 +9,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 // components
 import Header from "../Components/Header"
 import TranslatedText from "../Components/TranslatedText";
+import OneColRow from "../Components/OneColRow";
 
 // pages
 
@@ -47,18 +48,19 @@ const LowstockGUI = ()=> {
     return (
         <div style={{ height: "100%"}}>
             <Header title = "Low Stock" path = "/lowstockgui"/>
-            <div style = {{  marginTop: "3%", paddingLeft: "2.5%", paddingRight: "2.5%", paddingBottom: "2%", backgroundColor: "lightgrey" }}>
-                <p style = {{fontSize: "20px", textAlign: "center", paddingTop: "2%"}}>
-                    <Button onClick = {event => lowStock()} style = {{ height: "100%", width: "17.5%", backgroundColor: "blue", color: "white" }}><TranslatedText text = "Low Stock" key={lang}/></Button>
-                    { (stockItems ?? []).map( elem => {
-                        return (
-                            <div key = { elem.id }>
-                                { elem }
-                            </div>
-                        )
-                    })}
-                </p>
-          </div>
+            <div style={{maxHeight:"1000px", overflowY:"scroll", border:"solid", borderWidth:2, borderColor:"blue", backgroundColor:"blue", marginTop:20, marginLeft: "20%", marginRight: "20%", fontSize: "30px"}}>
+
+                <div style={{borderBottom:'solid white 3px', position:"sticky",  top:0}}>
+                    <OneColRow item = {"Items Low on Stock"} />
+                </div>
+
+                {(stockItems ?? []).map( (row) =>{
+                return (
+                    <OneColRow key = {row.id} item = {row}/>
+                )
+                })}
+
+            </div>
         </div>
     );
 }
