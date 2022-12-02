@@ -646,21 +646,25 @@ async function getQuantity(item){
 async function employeeType(email){
     let person ={};
     employee_name="";
-    query_str="SELECT employee_name from employees where employee_id = '"+ email +"';";
+    query_str="SELECT * from employees where employee_id = '"+ email +"';";
+    person.role = 'Customer'
+
     await pool
             .query(query_str)
             .then(query_res => {
-                for (let i = 0; i < query_res.rowCount; i++){
-                    employee_name=query_res.rows[i];
-                    console.log(query_res.rows[i]);
-                    person.name=employee_name.employee_name;
-                }});
-    person.email=email;
-    if(person.name =="Reagan R" || person.name =="David A" ){
-        person.role="Manager";
-    }else{
-        person.role="Employee";
-    }
+                
+                if (query_res.rows.length > 0){
+                    let sqlPerson = query_res.rows[0]
+                    person = sqlPerson
+                    console.log("person is ", person)
+                }
+
+            });
+    // if(person. =="Reagan R" || person.name =="David A" ){
+    //     person.role="Manager";
+    // }else{
+    //     person.role="Employee";
+    // }
     //  console.log(person.name);
     //  console.log(person.email);
     //  console.log(person.role);
