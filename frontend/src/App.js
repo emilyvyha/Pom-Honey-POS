@@ -48,10 +48,9 @@ const App= ()=> {
             <Route path="/inventory" element={<Inventory />} />
             <Route path="/popularcombos" element={<PopularCombos />} />
             <Route path="/excessreport" element={<ExcessReport />} />
-            <Route path="/lowstockgui" element={<LowstockGUI />} />
             {/* <Route path="/customergui" element={<CustomerGUI />} /> */}
             <Route path="/" element={<CustomerGUI />} />
-
+            <Route path="/lowstockgui" element={<LowstockGUI />} />
             <Route path="/cashiergui" element={<CashierGUI />} />
             <Route path="/statistics" element={<Statistics />} />
             <Route path="/map" element={<Map />} />
