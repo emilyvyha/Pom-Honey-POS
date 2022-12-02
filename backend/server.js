@@ -641,7 +641,7 @@ async function getQuantity(item){
 
 //gets the pinpad entry and returns a person with its name, id(pinpad), and role(manager or employee)
 // manager IDs: 45678, 67890
-async function employeeType(id){
+async function employeeType(email){
     let person ={};
     employee_name="";
     query_str="SELECT * from employees where employee_id = '"+ email +"';";
